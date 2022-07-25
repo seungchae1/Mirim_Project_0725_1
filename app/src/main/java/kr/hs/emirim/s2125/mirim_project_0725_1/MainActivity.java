@@ -9,9 +9,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements ActionBar.TabListener {
@@ -81,14 +83,20 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
             layout.setOrientation(LinearLayout.VERTICAL);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
             layout.setLayoutParams(params);
+            layout.setGravity(Gravity.CENTER);
+            ImageView imageview = new ImageView(super.getActivity());
+            layout.addView(imageview);
             if(tabName.equals("변백현")){
                 layout.setBackgroundColor(Color.BLUE);
+                imageview.setImageResource(R.drawable.bbk);
             }
             else if(tabName.equals("오세훈")){
                 layout.setBackgroundColor(Color.YELLOW);
+                imageview.setImageResource(R.drawable.osh);
             }
             else if(tabName.equals("김준면")){
                 layout.setBackgroundColor(Color.MAGENTA);
+                imageview.setImageResource(R.drawable.kjm);
             }
             return layout;
         }
