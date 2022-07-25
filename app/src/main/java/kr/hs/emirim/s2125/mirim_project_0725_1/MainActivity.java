@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements ActionBar.TabList
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
 
     }
-    public class MyFragment extends Fragment{
+    public static class MyFragment extends Fragment{
         String tabName;
         @Override
         public void onCreate(@Nullable Bundle savedInstanceState) {
